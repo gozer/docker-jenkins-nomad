@@ -1,0 +1,33 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+- repo: meta
+  hooks:
+  - id: check-hooks-apply
+  - id: check-useless-excludes
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.1.9
+  hooks:
+  - id: forbid-crlf
+  - id: remove-crlf
+  - id: forbid-tabs
+  - id: remove-tabs
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.4.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-added-large-files
+- repo: https://github.com/petalmd/dockerfile-pre-commit
+  rev: v1.0
+  hooks:
+  - id: dockerlint
+- repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+  rev: v0.1.0
+  hooks:
+  - id: dockerfilelint
+- repo: https://github.com/hukkinj1/mdformat
+  rev: 0.1.1  # Use the ref you want to point at
+  hooks:
+  - id: mdformat
